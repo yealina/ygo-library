@@ -8,11 +8,11 @@ yargs(hideBin(process.argv))
 
   .command(
     'search <filter> <value>',
-    'Search for a Yu-Gi-Oh! card using a filter and value',
+    'Search for a Yu-Gi-Oh! card using a fname or ID',
     (yargs) => {
       yargs
         .positional('filter', {
-          describe: 'Filter (e.g. fname, ID, archetype)',
+          describe: 'Filter (e.g. fname or ID)',
           type: 'string'
         })
         .positional('value', {

@@ -23,13 +23,8 @@ export function showHelp() {
   console.log(` 
       Filters
       =================
-      name           - Exact name of the card (e.g. Dark Magician)
       fname          - Fuzzy name search (e.g. 'Magician')
       id             - 8-digit unique ID (e.g. 46986414)
-      archetype      - e.g. Blue-Eyes
-      type           - e.g. SpellCaster
-      attribute      - e.g. Dark
-      atk, def, level, etc.
       `);
 }
 
