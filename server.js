@@ -1,8 +1,9 @@
 import express from 'express';
 
 import db from './services/db.js';
-//import YuGiOhCard from './routes/YuGiOhCard.js';
+
 import history from './routes/history.js';
+import ygocard from './routes/ygocard.js';
 
 
 const PORT = 8888;
@@ -19,14 +20,13 @@ app.get('/', (req, res) => {
 //      GET http://localhost:8888/history?type=selections
 app.use('/history', history);
 
-// routes/<topic>.js  (Uncomment when ready)
 // Example: 
-//      GET http://localhost:8888/YuGiOhCard/search?fname=dark
-// app.use('/ygocards', YuGiOhCard);
+//      GET http://localhost:8888/ygocards/keyword=Baby
+app.use('/ygocard', ygocard);
 
 
 // Start server + connect to MongoDB
-// start server command: npx run dev
+// start server command: npm start
 const server = app.listen(PORT, async () => {
   await db.connect();
   console.log(`Server is listening on http://localhost:${PORT}`);
