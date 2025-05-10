@@ -95,7 +95,7 @@ const mongo = () => {
     async function update(collectionName, query, data) {
         try {
             const collection = db.collection(collectionName);
-            const acknowledgement = await collection.updateOne(query, { $set: data });
+            const acknowledgement = await collection.updateOne(query, { $set: data }, {upsert:true});
 
             return acknowledgement;
         } catch (err) {

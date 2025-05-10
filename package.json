@@ -4,13 +4,13 @@
 
   "version": "1.0.0",
 
-  "main": "cli.js",
+  "main": "server.js",
 
   "type": "module",
 
   "scripts": {
 
-    "start": "npx nodemon server.js"
+    "start": "nodemon server.js"
 
   },
 
@@ -28,15 +28,13 @@
 
     "inquirer": "^8.2.6",
 
-    "mongodb": "^6.16.0",
-
-    "yargs": "^17.7.2"
+    "mongodb": "^6.16.0"
 
   },
 
   "devDependencies": {
 
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.9"
 
   }
 
